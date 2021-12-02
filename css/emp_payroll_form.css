@@ -5,7 +5,7 @@ body {
 
 .header {
     padding: 15px 0;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .header-content {
@@ -14,7 +14,6 @@ body {
     justify-content: center;
     align-items: center;
     border: 0px solid green;
-    background-color: antiquewhite;
 }
 
 .logo-content {
@@ -26,11 +25,11 @@ body {
 }
 
 .logo-content-img {
-    border: solid 1px #42515f;
+    border: solid 0px #42515f;
 }
 
 .emp-text {
-    font: normal normal bold 20px/20px Montserrat;
+    font: normal normal bold 20px/25px Montserrat;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0px;
     color: #82a70c;
@@ -52,21 +51,20 @@ body {
     justify-content: center;
     align-items: center;
     border: 0px solid green;
-    background-color: antiquewhite;
 }
 
 .form {
     width: 65%;
     padding: 44px 60px;
-    background: #ffffff 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
+    background: #fff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px grey;
     border: 1px solid #f5f5f5;
     border-radius: 8px;
     opacity: 1;
 }
 
 .form-head {
-    font: normal normal bold 24px/37px Times New Roman;
+    font: normal normal bold 24px/37px Roboto;
     letter-spacing: 0px;
     color: #42515f;
     text-transform: capitalize;
@@ -95,14 +93,14 @@ label {
     font-size: 16px;
     color: #42515f;
     opacity: 1;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
+    font-family: Robonto;
 }
 
 .input {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
+    border-radius: 4px;
     resize: vertical;
 }
 
@@ -124,77 +122,91 @@ label {
 }
 
 select {
-    padding: 15px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
-    font: normal normal normal 16px Times New Roman;
+    font: normal normal normal 16px Roboto;
     letter-spacing: 0px;
     color: #42515f;
     background-color: transparent;
 }
 
+.buttonParent {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
 .button {
-    font: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-family: Roboto;
     letter-spacing: 0px;
-    color: black;
+    color: #42515f;
     opacity: 1;
     background: transparent;
+    border: none;
     font-weight: 400;
     min-width: 140px;
     padding: 7px 7px;
+    border: 1px solid #707070;
     cursor: pointer;
-    transition: all 0.5s;
-    vertical-align: middle;
-    border-radius: 5px;
 }
 
 .submitButton {
+    border: none;
+    background-color: #f5f5f5;
     margin-right: 30px;
-    margin-left: 278px;
 }
 
 .cancelButton {
-    margin-left: 140px;
+    text-decoration: none;
+    text-align: center;
 }
 
-.button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
+.resetButton {
     border: none;
+    background-color: #f5f5f5;
+    margin-right: 30px;
 }
 
-.button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
+@media only screen and (max-width: 960px) {
+    .cancelButton {
+        margin-left: 0px;
+    }
+    .form {
+        width: 85%;
+        padding: 44px 20px;
+    }
 }
 
-.button:hover span {
-    padding-right: 25px;
-    color: black;
+@media only screen and (max-width: 600px) {
+    .form {
+        margin-top: 10px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .uploadButton {
+        justify-content: flex-start;
+    }
+    .profile-radio-button {
+        flex-flow: wrap;
+    }
+    .submit-reset {
+        width: 100%;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .submitButton {
+        margin: 0;
+    }
+    .buttonParent {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
 }
-
-.button:hover span:after {
-    opacity: 1;
-    right: 0;
-}
-
-.cancelButton:hover {
-    background-color: red;
-}
-
-.submitButton:hover {
-    background-color: rgb(22, 184, 22);
-}
-
-.resetButton:hover {
-    background-color: rgb(218, 64, 64);
-}
-
